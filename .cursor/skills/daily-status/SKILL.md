@@ -29,7 +29,7 @@ Give Vanessa a clear, friendly summary of everything that is waiting for her att
 Use this format exactly:
 
 ```
-Good morning, Vanessa! Here's your Redefine status update from Rosy:
+Good morning, Vanessa! Here's your VWPM status update from Rosy:
 
 **Pending your review (inbox/):**
 - [filename] — [type, e.g. "product draft" or "email draft"]

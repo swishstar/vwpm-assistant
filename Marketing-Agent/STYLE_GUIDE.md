@@ -33,7 +33,7 @@
 ## Social Media Posts
 - **Facebook:** 2-3 sentences + image. Include event date, city, and link.
 - **Instagram:** Shorter caption. Lead with the visual hook. Hashtags at the end (5-8 max).
-- **Hashtag pool:** `#Redefine #FloridaTraining #[CityName] #Leadership #PersonalDevelopment`
+- **Hashtag pool:** `#VWPM #FloridaTraining #[CityName] #Leadership #PersonalDevelopment`
 
 ## Canva Assets
 - Training flyers: 1080×1080px (square) for social, 1920×1080px (landscape) for email headers.

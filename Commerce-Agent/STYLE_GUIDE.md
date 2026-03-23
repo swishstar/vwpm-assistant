@@ -47,7 +47,7 @@
 - File naming: `[event-slug]-[image-type].jpg`
 
 ## SEO
-- SEO title: product name + "| Redefine" — max 60 characters.
+- SEO title: product name + "| VWPM" — max 60 characters.
 - Meta description: 1-2 sentences, include location and primary keyword — max 160 characters.
 
 ---

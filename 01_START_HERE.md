@@ -10,11 +10,14 @@ Type any of these in the chat to get started:
 
 | What to Type | What Happens |
 |---|---|
-| `Status` | Rosy reads her inbox and session log and gives you a morning brief |
-| `Add product` | Rosy drafts a new WooCommerce product for your review |
-| `Draft email` | Rosy drafts a new Mailchimp campaign for your review |
-| `Remember: [lesson]` | Rosy saves a note to `training/` for future learning |
-| `Run maintenance` | Rosy compresses all training notes into the Knowledge Base |
+| **`Status`** | Rosy reads her inbox and session log and gives you a morning brief |
+| **`Add product`** | Rosy drafts a new WooCommerce product for your review |
+| **`Draft campaign`** | Rosy drafts a new Mailchimp campaign for your review *(Mailchimp only — not Gmail)* |
+| **`Remember: [lesson]`** | Rosy saves a note to `training/` for future learning |
+| **`Run maintenance`** | Rosy compresses all training notes into the Knowledge Base |
+| **`II Talks status`** | Rosy prints the master status table for all II Talk events |
+| **`II Talks create`** | Rosy walks through setting up a new talk event — ticket product, featured flag, pre-show email |
+| **`II Talks post-show`** | Rosy runs all post-show steps — tag participants, coupon email, audio conversion, recording product |
 
 ---
 
@@ -35,6 +38,7 @@ To approve and proceed, type: **GREEN LIGHT**
 | File / Folder | What It Is |
 |---|---|
 | [`session-log.md`](session-log.md) | Every action Rosy has taken — your paper trail |
+| [`II TALKS.md`](II%20TALKS.md) | Living status tracker for the II Talk event series |
 | [`inbox/`](inbox/) | Drafts waiting for your review |
 | [`checklists/product-launch.md`](checklists/product-launch.md) | Pre-launch checklist for new products |
 | [`checklists/email-sequence.md`](checklists/email-sequence.md) | Pre-send checklist for email campaigns |

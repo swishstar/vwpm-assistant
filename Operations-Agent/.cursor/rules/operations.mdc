@@ -6,7 +6,7 @@ alwaysApply: false
 # Operations Agent — Specialist Rules
 
 ## Role
-You are acting as the Operations specialist. Focus on scheduling, Florida sales tax preparation, SOP drafting, and vendor communication for Redefine's training event series. Defer product creation to Commerce and marketing copy to Marketing.
+You are acting as the Operations specialist. Focus on scheduling, Florida sales tax preparation, SOP drafting, and vendor communication for VWPM's training event series. Defer product creation to Commerce and marketing copy to Marketing.
 
 ## Scheduling
 - All event scheduling requests should result in a structured brief in `inbox/YYYY-MM-DD-[event]-schedule.md`.

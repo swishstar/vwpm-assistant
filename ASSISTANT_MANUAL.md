@@ -1,6 +1,6 @@
 # Rosy — Your Business Assistant
 *Skills & Capabilities Reference*
-*Last Updated: 2026-03-23 (v0.4.0)*
+*Last Updated: 2026-03-23 (v0.5.0)*
 
 ---
 
@@ -16,7 +16,8 @@ This is your cheat sheet. When you are about to do something manually — stop a
 
 ### WooCommerce & Your Website
 
-**`add-product`** — Just say "Add a new product" or "Create a listing"
+**`add-product`**
+**Say:** **`Add product`** · **`Add a new product`** · **`Create a listing`**
 > I can create a new product draft for your WooCommerce store. I look at your past products first to make sure the shipping class, tax settings, and naming all match your existing style. The draft lands in your inbox for you to review before anything is published.
 
 **`update-inventory`** *(COMING SOON)*
@@ -26,7 +27,8 @@ This is your cheat sheet. When you are about to do something manually — stop a
 
 ### Email & Marketing
 
-**`draft-email`** — Just say "Draft an email" or "Write a new campaign"
+**`draft-campaign`** *(Mailchimp only — not Gmail)*
+**Say:** **`Draft campaign`** · **`Draft Mailchimp`** · **`Write a new campaign`** · **`New Mailchimp email`**
 > I can write a full Mailchimp email campaign for you. I check your past campaigns first to match your tone and structure. You review the draft in your inbox before I create anything in Mailchimp.
 
 **`sync-subscribers`** *(COMING SOON)*
@@ -36,14 +38,28 @@ This is your cheat sheet. When you are about to do something manually — stop a
 
 ### Daily Operations
 
-**`daily-status`** — Just say "Status", "Good morning", or "What's pending"
+**`daily-status`**
+**Say:** **`Status`** · **`Good morning`** · **`What's pending`**
 > I give you a morning brief: what is waiting in your inbox, what I have done recently, and what is waiting for your GREEN LIGHT. A quick way to pick up where you left off.
 
-**`remember`** — Just say "Remember this: ..." or "Don't do that again"
+**`remember`**
+**Say:** **`Remember this: [lesson]`** · **`Don't do that again`** · **`Note that`**
 > I save a note about a correction, preference, or decision you just made. That note gets added to my memory during the next maintenance run so I don't repeat the mistake.
 
-**`compress-memory`** — Just say "Run maintenance"
+**`compress-memory`**
+**Say:** **`Run maintenance`**
 > I read all the notes in the training folder, extract the lessons, and add them to my permanent Knowledge Base. Then I clean up the raw notes and archive them to keep things tidy.
+
+---
+
+### Events
+
+**`ii-talks`**
+**Say:** **`II Talks status`** · **`II Talks create`** · **`II Talks post-show`**
+> I manage the full lifecycle of II Talk events across all venues. Three modes:
+> - **`II Talks status`** — Print the master status table from `II TALKS.md` and flag any events needing attention.
+> - **`II Talks create`** — Walk you through setting up a new event: Canva asset reminder, ticket product creation, featured flag, and pre-show email draft.
+> - **`II Talks post-show`** — Run through all post-show steps in order: tag participants, unpublish ticket, remove featured, send coupon email, convert audio, upload to WordPress, and create or update the recording product.
 
 ---
 
@@ -93,9 +109,10 @@ Once you have reviewed the draft and the checklist, type **GREEN LIGHT** in the 
 | `Marketing-Agent/past-emails/` | Reference library of past campaigns |
 | `checklists/` | Product and email launch checklists |
 | `training/` | Notes awaiting compression into memory |
+| `II TALKS.md` | Living status document for the II Talks event series |
 | `session-log.md` | Every action Rosy has taken — your paper trail |
 | `KNOWLEDGE_BASE.md` | Rosy's compressed memory and preferences |
-| `scripts/` | Automation scripts for advanced tasks (Puppeteer) |
+| `scripts/` | Automation scripts for advanced tasks (ffmpeg, Puppeteer) |
 | `archive/` | Cold storage — historical data, never indexed |
 
 ### Security

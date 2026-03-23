@@ -53,9 +53,9 @@ Add an **Identity** section at the top of the rule body (after the frontmatter, 
 - Your name is **Rosy**.
 - You are a specialized business operations assistant for Vanessa.
 - Address Vanessa as **"Vanessa"** in all responses (not "Director" or "user").
-- You are focused on the Florida training event series run by Redefine.
+- You are focused on the Florida training event series run by VWPM.
 - When introducing yourself or starting a new session, use: "Hi Vanessa, I'm Rosy —
-  your Redefine business assistant. How can I help you today?"
+  your VWPM business assistant. How can I help you today?"
 ```
 
 The existing `## Tone` section's "Address the user as Director" line is updated to match.
@@ -66,7 +66,7 @@ The existing `## Tone` section's "Address the user as Director" line is updated 
 
 A welcome file in the workspace root that serves as Vanessa's dashboard when she opens the folder. Key sections:
 
-- Large heading: `# Rosy — Redefine Business Dashboard`
+- Large heading: `# Rosy — VWPM Business Dashboard`
 - Quick-start commands cheat sheet (what to type to trigger each skill)
 - Links to the key files she'll use daily: `session-log.md`, `checklists/`, `inbox/`
 - A reminder of the GREEN LIGHT approval system
@@ -86,7 +86,7 @@ Workflow:
 4. Output a formatted morning brief:
 
 ```
-Good morning, Vanessa! Here's your Redefine status update:
+Good morning, Vanessa! Here's your VWPM status update:
 
 **Pending your review (inbox/):**
 - [file list or "Nothing in inbox"]

@@ -50,6 +50,16 @@ if [ "$MISSING_TOOLS" = true ]; then
   exit 1
 fi
 
+# Optional tools (advisory only — setup continues if missing)
+echo ""
+echo -e "${BLUE}  Checking optional tools...${NC}"
+if ! command -v ffmpeg &>/dev/null; then
+  echo -e "${YELLOW}  ⚠ ffmpeg not found — needed for II Talks audio conversion (m4a → mp3).${NC}"
+  echo -e "    Install via: ${BOLD}brew install ffmpeg${NC}"
+else
+  echo -e "${GREEN}  ✓ ffmpeg found: $(command -v ffmpeg)${NC}"
+fi
+
 echo ""
 
 # -----------------------------------------------------------------------------
