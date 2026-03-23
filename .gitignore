@@ -8,6 +8,7 @@ credentials.json
 inbox/
 archive/
 checklists/
+training/
 session-log.md
 *.log
 

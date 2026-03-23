@@ -2,6 +2,23 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.5.0] — 2026-03-23
+
+### Added
+- `.cursor/mcp.json.example` — tracked safe template for MCP credentials; replaces need to commit the real `mcp.json`
+- `.env.example` — full credential reference with descriptions and setup instructions for all services
+- `training/` added to `.gitignore` — lesson notes now stay on the context branch, not main
+- `.cursor/skills/update-assistant/SKILL.md` — Vanessa can type "Update assistant" to pull the latest rules, skills, and scripts from main; Rosy summarizes what changed
+- `.cursor/rules/weekly-backup.mdc` — every Friday, Rosy prompts Vanessa to back up session log, checklists, training notes, and archive to the `context-backup` branch; also handles file restore requests
+- `setup.sh` — one-command bootstrap script for any new machine: checks prerequisites, copies example configs, installs Node dependencies, and prints setup instructions
+- `SETUP_GUIDE.md` — complete documentation for the full Dev → GitHub → Vanessa's machine workflow, including credentials reference, context backup/restore, and new machine setup
+
+### Architecture
+- **Two-branch model formalized:** `main` holds Rosy's logic (managed by developer), `context-backup` holds Vanessa's operational data (managed by Rosy's weekly backup rule)
+- **Secrets confirmed never in git:** `.cursor/mcp.json` was confirmed untracked; `.gitignore` covers `.env`, `mcp.json`, and all context data folders
+
+---
+
 ## [0.4.0] — 2026-03-23
 
 ### Added

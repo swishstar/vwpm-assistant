@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "mailchimp": {
+      "command": "npx",
+      "args": ["-y", "@fastmcp/mailchimp"],
+      "env": {
+        "MAILCHIMP_API_KEY": "YOUR_MAILCHIMP_API_KEY",
+        "MAILCHIMP_SERVER_PREFIX": "us1_or_us2_etc"
+      }
+    },
+    "woocommerce": {
+      "command": "npx",
+      "args": ["-y", "@fastmcp/woocommerce"],
+      "env": {
+        "WOO_URL": "https://your-site.com",
+        "WOO_CONSUMER_KEY": "ck_your_key_here",
+        "WOO_CONSUMER_SECRET": "cs_your_secret_here"
+      }
+    },
+    "google-drive": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-google-drive"],
+      "env": {
+        "GOOGLE_DRIVE_CREDENTIALS_JSON": "paste_full_json_string_here"
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+---
+description: Weekly context backup rule — commits Vanessa's operational data (session log, checklists, training notes, archive) to the context-backup branch. Triggers every Friday during Morning Brief or on demand.
+alwaysApply: true
+---
+
+# Weekly Backup Rule
+
+## What Gets Backed Up vs. What Doesn't
+
+| Backed Up (context-backup branch) | Not Backed Up (local only) |
+|-----------------------------------|-----------------------------|
+| `session-log.md` — paper trail of all actions | `.env` — credentials (never in git) |
+| `checklists/` — Vanessa's filled checklists | `.cursor/mcp.json` — MCP credentials |
+| `training/` — lesson notes awaiting compression | |
+| `archive/` — cold storage historical data | |
+
+Rosy's logic (rules, skills, scripts) lives on `main` and is managed by the developer.
+
+## Trigger Conditions
+
+1. **Automatic — every Friday:** During the Morning Brief, if today is Friday, prompt Vanessa for backup GREEN LIGHT before the end of the brief.
+2. **On demand:** Any message containing "back up", "save my work", "commit my data", or "backup".
+
+## Backup Workflow
+
+### Step 1 — Check for Changes
+Run: `git status --short`
+
+If the output shows no changes to `session-log.md`, `checklists/`, `training/`, or `archive/`, report: "Nothing new to back up since the last backup." and stop.
+
+### Step 2 — Present the Plan
+Show Vanessa what will be committed:
+```
+git checkout -B context-backup
+git add checklists/ session-log.md training/ archive/
+git commit -m "Context backup — YYYY-MM-DD"
+git push origin context-backup
+git checkout main
+```
+
+State: "I'll save your session log, checklists, training notes, and archive to the backup branch on GitHub. Your credentials and Rosy's logic are not affected. Type GREEN LIGHT to proceed."
+
+### Step 3 — Wait for GREEN LIGHT
+
+### Step 4 — Execute
+Run the commands in sequence. After each command, confirm it succeeded before continuing. If any command fails, stop and report the error clearly.
+
+### Step 5 — Confirm and Log
+Report: "Backup complete. Your data is saved to the `context-backup` branch on GitHub as of [date]."
+
+Append to `session-log.md`:
+```
+| YYYY-MM-DD HH:MM | CONTEXT BACKUP | Committed session-log, checklists, training, archive to context-backup branch |
+```
+
+Then return to `main`: `git checkout main`
+
+## Restoring a Deleted File
+
+If Vanessa says "Can you restore [filename] I deleted?" or "Get back [filename]":
+
+1. Run: `git log --oneline context-backup -- [filepath]` to confirm the file exists in backup
+2. Present the restore command: `git checkout context-backup -- [filepath]`
+3. Wait for GREEN LIGHT
+4. Run the restore and confirm the file is back
+
+## Notes
+- Always end the backup sequence on `main` — never leave Vanessa on `context-backup`
+- If no remote is configured (`git remote -v` returns nothing), skip the push step and note: "Local backup created. Push to GitHub is not yet configured — see SETUP_GUIDE.md."
+- The `context-backup` branch can safely be force-pushed (`-B` flag) since it is Vanessa's data branch, not a shared development branch
