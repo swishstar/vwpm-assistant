@@ -1,0 +1,23 @@
+# --- Secrets & Config ---
+.cursor/mcp.json
+.env
+auth.json
+credentials.json
+
+# --- User-Specific Data (Managed by 'Context' branch) ---
+inbox/
+archive/
+checklists/
+session-log.md
+*.log
+
+# --- System & Dependencies ---
+node_modules/
+.DS_Store
+Thumbs.db
+.cursor/cache/
+.cursor/index/
+
+# --- Temporary Drafts ---
+**/drafts/*.tmp
+**/temp_*
