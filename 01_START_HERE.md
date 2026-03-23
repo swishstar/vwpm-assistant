@@ -1,4 +1,4 @@
-# Rosy — Redefine Business Dashboard
+# Rosy — Your Business Assistant Dashboard
 
 Welcome back, Vanessa. This is your central hub. Everything Rosy does goes through this workspace.
 
@@ -10,7 +10,7 @@ Type any of these in the chat to get started:
 
 | What to Type | What Happens |
 |---|---|
-| `Status` | Rosy reads your inbox and session log and gives you a morning brief |
+| `Status` | Rosy reads her inbox and session log and gives you a morning brief |
 | `Add product` | Rosy drafts a new WooCommerce product for your review |
 | `Draft email` | Rosy drafts a new Mailchimp campaign for your review |
 | `Remember: [lesson]` | Rosy saves a note to `training/` for future learning |

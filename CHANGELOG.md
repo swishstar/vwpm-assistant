@@ -2,6 +2,19 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.4.0] — 2026-03-23
+
+### Added
+- `.cursor/rules/manual-maintenance.mdc` — always-on rule that keeps `ASSISTANT_MANUAL.md` current when skills or MCP servers are added; enforces `*(NEW — added YYYY-MM-DD)*` badge logic with 7-day expiry
+- `scripts/README.md` — establishes the `scripts/` folder as the Puppeteer/automation library; documents folder convention, security rules, and planned scripts
+- `COMING SOON` placeholder entries in `ASSISTANT_MANUAL.md` for `fetch-canva-assets` and `file-sales-tax-draft`
+
+### Changed
+- `ASSISTANT_MANUAL.md` — full rewrite from technical architecture document to Vanessa-friendly "Job Description" format; all skill descriptions use plain-English "I can..." language; technical sections moved to "For Advanced Reference" at the bottom; Rules table added
+- `orchestrator.mdc` Morning Brief — now checks `ASSISTANT_MANUAL.md` for `*(NEW)*` badges and surfaces new skills in the greeting; also triggers badge expiry cleanup
+
+---
+
 ## [0.3.0] — 2026-03-23
 
 ### Added

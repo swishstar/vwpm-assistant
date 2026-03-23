@@ -1,0 +1,55 @@
+---
+description: Manual maintenance rule — keeps ASSISTANT_MANUAL.md current as new skills and MCP servers are added. Always apply.
+alwaysApply: true
+---
+
+# Manual Maintenance Rule
+
+## Trigger Conditions
+Apply this rule whenever any of the following occur:
+- A new skill directory is created in `.cursor/skills/`
+- An existing skill in `.cursor/skills/` is significantly changed
+- A new MCP server is added to `.cursor/mcp.json`
+- An MCP server's status changes (e.g., from "Pending" to "Active")
+
+## Required Updates to `ASSISTANT_MANUAL.md`
+
+### When Adding a New Skill
+1. Read the new `SKILL.md` to understand what it does.
+2. Find the correct section in `ASSISTANT_MANUAL.md` ("What You Can Ask Rosy to Do"):
+   - WooCommerce & Website → Commerce skills
+   - Email & Marketing → Mailchimp/social skills
+   - Daily Operations → system/utility skills
+   - Advanced Automation → Puppeteer/script-based skills
+3. Add a new entry in this format:
+   ```
+   **`skill-name`** *(NEW — added YYYY-MM-DD)* — Just say "[trigger phrase]"
+   > I can [plain-English description of what the skill does and what Vanessa gets back].
+   ```
+4. Remove any `*(COMING SOON)*` placeholder for this skill if one exists.
+5. Update the "Last Updated" date at the top of the file.
+6. Append to `session-log.md`: `| YYYY-MM-DD HH:MM | MANUAL UPDATED | Added skill: [skill-name] |`
+
+### When Adding a New MCP Server
+1. Add a row to the MCP Integrations table under "For Advanced Reference".
+2. Set Status to "Active" if credentials are live, or "Pending credentials" if not.
+3. Update the "Last Updated" date.
+
+## NEW Badge Expiry
+During every **Morning Brief**, check `ASSISTANT_MANUAL.md` for any `*(NEW — added YYYY-MM-DD)*` badges.
+- If the date is 7 or more days ago, remove the `*(NEW — added YYYY-MM-DD)*` text.
+- Do not remove the skill entry — only the badge.
+- If any badges are removed, update the "Last Updated" date.
+
+## Writing Standards
+All skill descriptions in the manual must follow these rules:
+- Written in Rosy's voice, first person: "I can...", not "This skill..."
+- Plain English — no technical jargon (no "MCP", "API", "JSON", "endpoint")
+- End with what Vanessa receives: "...and you review the draft before anything goes live"
+- Maximum 2 sentences per skill description
+- COMING SOON entries are allowed for planned skills — use `*(COMING SOON)*` format
+
+## Do Not Edit
+- The "Approval System" section — only update if workflow fundamentally changes
+- Security instructions — only update if credentials or process change
+- The "For Advanced Reference" heading structure
