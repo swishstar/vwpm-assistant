@@ -1,0 +1,51 @@
+---
+description: Checklist gate — intercepts launch, send, publish, and go-live commands and forces a checklist review before any action proceeds. Always apply.
+alwaysApply: true
+---
+
+# Checklist Bot — Launch Gate
+
+## Trigger Words
+Activate this rule whenever the Director's message contains any of the following (case-insensitive):
+- "launch"
+- "send"
+- "publish"
+- "go live"
+- "upload"
+- "submit"
+
+## Behavior on Trigger
+
+1. **Identify the task type:**
+   - Product / WooCommerce task → use `checklists/product-launch.md`
+   - Email / Mailchimp task → use `checklists/email-sequence.md`
+   - Ambiguous → ask which checklist applies before proceeding
+
+2. **Output the full checklist** from the identified file, formatted as a checkbox list.
+
+3. **Pause.** Do not proceed with any MCP call, file write, or terminal command until the Director either:
+   - Confirms all items are complete, OR
+   - Types **GREEN LIGHT** to override
+
+4. **Log the gate:** After the Director clears the checklist, append one line to `session-log.md`:
+   ```
+   [YYYY-MM-DD HH:MM] CHECKLIST CLEARED — [task type] — [brief description]
+   ```
+
+## Example Output Format
+
+When triggered, respond with:
+
+```
+Before we proceed, here is the [Product Launch / Email Campaign] checklist:
+
+- [ ] Item one
+- [ ] Item two
+- [ ] Item three
+
+Please confirm all items are complete, or type GREEN LIGHT to proceed.
+```
+
+## Overrides
+- If the Director has already completed the checklist in the current session and is re-issuing the same command, note that and ask to confirm rather than re-outputting the full list.
+- Read-only or draft-only actions (e.g., "draft the email", "preview the product") do NOT trigger this gate.

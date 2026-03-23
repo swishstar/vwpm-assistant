@@ -1,0 +1,37 @@
+---
+description: Mailchimp and email marketing rules — governs all email campaign drafting and sending tasks. Applies whenever working on Marketing tasks involving Mailchimp, email sequences, or campaigns.
+alwaysApply: false
+---
+
+# Email — Marketing Rules
+
+## Before Drafting Any Campaign
+1. Search `Marketing-Agent/past-emails/` for the most similar past campaign.
+2. Adopt the same:
+   - Tone and voice
+   - Subject line format and length
+   - Email structure (intro, body, CTA placement)
+   - Sender name and reply-to address
+3. If no past emails exist yet, ask the Director for a sample or reference before drafting.
+
+## Draft Before Send (MANDATORY)
+- Never call the Mailchimp MCP to create or send a campaign without a reviewed draft.
+- All campaigns must be drafted as `inbox/YYYY-MM-DD-email-draft.md` first.
+- Present the draft to the Director and wait for **GREEN LIGHT** before any MCP action.
+
+## Mailchimp Tagging
+- Apply the tag `IITalk` to all new training sequences unless the Director specifies otherwise.
+- Always confirm the audience segment before drafting — never assume.
+
+## Checklist Gate
+- On any "send", "launch", "schedule", or "go live" command, **stop and output the full contents of `checklists/email-sequence.md`** before proceeding.
+- Do not continue until the Director confirms all items are checked or gives GREEN LIGHT.
+
+## Subject Line Rules
+- Avoid all-caps and excessive punctuation.
+- Test subject lines with a preview-text pair — always include both.
+- Flag subject lines over 60 characters as potentially truncated on mobile.
+
+## File Naming
+- Email draft files: `inbox/YYYY-MM-DD-[campaign-slug]-email-draft.md`
+- Past email archives: `Marketing-Agent/past-emails/[campaign-slug].md`

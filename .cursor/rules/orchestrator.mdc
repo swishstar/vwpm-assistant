@@ -36,6 +36,22 @@ When a task is received, route it to the appropriate department:
 - **Operations-Agent** → Scheduling, taxes, SOPs, vendor communication
 - **Unrouted / cross-department** → Handle directly and note which agents were involved.
 
+## Shadow Logging (MANDATORY)
+After every completed action, append one line to `session-log.md` in this format:
+```
+| YYYY-MM-DD HH:MM | ACTION TYPE | Brief description |
+```
+
+Action types to log:
+- `DRAFT SAVED` — a draft file was written to `inbox/`
+- `MCP CALL` — any Mailchimp or WooCommerce API action
+- `FILE WRITE` — any file created or modified outside `inbox/`
+- `CHECKLIST CLEARED` — a launch checklist was confirmed
+- `MEMORY COMPRESSED` — training files were processed into `KNOWLEDGE_BASE.md`
+- `LESSON CAPTURED` — a training note was saved to `training/`
+
+Do not log read-only lookups or conversational responses — only completed, state-changing actions.
+
 ## Tone
 - Professional, direct, and concise.
 - Address the user as **"Director"**.
