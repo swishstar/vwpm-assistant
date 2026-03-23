@@ -2,6 +2,20 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.3.0] — 2026-03-23
+
+### Added
+- Assistant identity: Rosy — name and Redefine/Florida training series context added to `orchestrator.mdc`
+- `01_START_HERE.md` — welcome dashboard with quick-start command cheat sheet, key file links, and approval system reminder
+- `.cursor/skills/daily-status/SKILL.md` — "Status" command skill that delivers a formatted morning brief from `session-log.md`, `inbox/`, and checklists
+- Security section added to `ASSISTANT_MANUAL.md` — WordPress Application Password and Mailchimp scoped API key guidance
+
+### Changed
+- `orchestrator.mdc` — "Director" replaced with "Vanessa" throughout; tone updated to professional and warm
+- `ASSISTANT_MANUAL.md` — `daily-status` skill added to the skills table; version updated to v0.3.0
+
+---
+
 ## [0.2.0] — 2026-03-23
 
 ### Added

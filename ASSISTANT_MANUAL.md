@@ -32,6 +32,7 @@ This is a modular, agentic Business Operating System built on the OpenClaw archi
 
 | Skill | Trigger | Purpose |
 |-------|---------|---------|
+| `daily-status` | "Status" / "Daily brief" / "Good morning" / "What's pending" | Reads inbox, session log, and checklists; delivers a morning brief |
 | `compress-memory` | "Run maintenance" / weekly | Extracts lessons from `training/` → `KNOWLEDGE_BASE.md`, archives raw data |
 | `remember` | "Remember this" / after corrections | Captures new lessons as training documents for future compression |
 | `add-product` | "Add product" / "New product" / "Create listing" | Archive-first WooCommerce product creation with inbox draft and GREEN LIGHT gate |
@@ -80,4 +81,25 @@ This is a modular, agentic Business Operating System built on the OpenClaw archi
 
 ---
 
-*Last updated: 2026-03-23 (v0.2.0)*
+## Security
+
+### WordPress — Use an Application Password
+Do **not** put your main WordPress admin password in `.cursor/mcp.json`. Instead:
+1. Log in to WordPress Admin → **Users → Profile**
+2. Scroll to **Application Passwords**
+3. Create a new password named `Cursor-Rosy`
+4. Copy the generated password into `mcp.json` under `WOO_CONSUMER_SECRET`
+
+This way, if you ever need to revoke Rosy's access, you delete just that application password — your main account is never exposed.
+
+### Mailchimp — Use a Scoped API Key
+Do **not** use your main Mailchimp account password. Instead:
+1. Log in to Mailchimp → **Account → Extras → API Keys**
+2. Create a new API key named `Cursor-Rosy`
+3. Copy it into `mcp.json` under `MAILCHIMP_API_KEY`
+
+Scoped keys can be deleted at any time without affecting your account login.
+
+---
+
+*Last updated: 2026-03-23 (v0.3.0)*
