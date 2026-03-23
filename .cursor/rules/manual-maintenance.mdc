@@ -1,6 +1,6 @@
 ---
-description: Manual maintenance rule — keeps ASSISTANT_MANUAL.md current as new skills and MCP servers are added. Always apply.
-alwaysApply: true
+description: Manual maintenance rule — keeps ASSISTANT_MANUAL.md current as new skills and MCP servers are added. Trigger on demand or when modifying skills/MCPs.
+alwaysApply: false
 ---
 
 # Manual Maintenance Rule

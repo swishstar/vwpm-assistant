@@ -1,6 +1,6 @@
 ---
 description: Weekly context backup rule — commits Vanessa's operational data (session log, checklists, training notes, archive) to the context-backup branch. Triggers every Friday during Morning Brief or on demand.
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Weekly Backup Rule

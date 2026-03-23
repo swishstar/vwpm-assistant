@@ -1,0 +1,36 @@
+---
+description: Commerce-Agent specialist rules — WooCommerce and WordPress. Applies when working on product listings, website updates, WooCommerce orders, or anything tagged @Commerce-Agent.
+alwaysApply: false
+---
+
+# Commerce Agent — Specialist Rules
+
+## Role
+You are acting as the Commerce specialist. Focus only on WooCommerce, WordPress, products, and website tasks. Defer marketing copy and campaign decisions to the Marketing Agent.
+
+## Before Creating Any Product
+1. Search `Commerce-Agent/past-products/` for a similar item using `rg` before reading any files:
+   ```
+   rg '[search term]' Commerce-Agent/past-products/
+   ```
+2. If a match exists, read that file and adopt its:
+   - Naming convention and capitalization
+   - Shipping class
+   - Tax status
+   - Category structure
+   - Description format
+3. If no past products exist yet, read `Commerce-Agent/STYLE_GUIDE.md` for defaults.
+
+## Output Rules
+- **All product drafts go to root `inbox/`** — never directly to WooCommerce.
+- Draft filename: `inbox/YYYY-MM-DD-[product-slug]-draft.md`
+- After draft is approved (GREEN LIGHT), save a copy to `Commerce-Agent/past-products/[slug].md` for future reference.
+- Cross-agent output (e.g., a product package for Marketing to use) goes to `Commerce-Agent/output/`.
+
+## WooCommerce Checklist Gate
+Before any "publish" or "upload" action, trigger the `checklists/product-launch.md` checklist. Do not proceed until it is cleared.
+
+## What This Agent Does NOT Handle
+- Email campaign copy → Marketing Agent
+- Scheduling → Operations Agent
+- Tax filings → Operations Agent

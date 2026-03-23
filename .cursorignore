@@ -1,0 +1,26 @@
+# ============================================================
+# Cursor Indexer Exclusions
+# This file controls what Cursor's AI indexer ignores.
+# Distinct from .gitignore — does not affect git tracking.
+# ============================================================
+
+# --- Agent reference libraries — load on demand via @-reference only ---
+Commerce-Agent/past-products/
+Commerce-Agent/output/
+Marketing-Agent/past-emails/
+Marketing-Agent/output/
+Operations-Agent/output/
+
+# --- Cold storage — never index ---
+archive/
+
+# --- Script dependencies and build artifacts ---
+node_modules/
+scripts/fetch-canva/
+scripts/sales-tax/
+package-lock.json
+
+# --- System ---
+.git/
+*.log
+.DS_Store

@@ -2,6 +2,35 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.7.0] — 2026-03-23
+
+### Added
+- `.cursorignore` (root) — prevents Cursor's AI indexer from scanning agent reference libraries (`past-products/`, `past-emails/`), agent `output/` handoff folders, `archive/`, `node_modules/`, and system files; reduces background token cost
+- `Commerce-Agent/.cursor/rules/commerce.mdc` — path-scoped specialist rule for WooCommerce and WordPress; `alwaysApply: false` — fires only when @Commerce-Agent is referenced or files in that folder are open
+- `Marketing-Agent/.cursor/rules/marketing.mdc` — path-scoped specialist rule for Mailchimp, social media, and campaign content; `alwaysApply: false`
+- `Operations-Agent/.cursor/rules/operations.mdc` — path-scoped specialist rule for scheduling, Florida sales tax, and SOPs; `alwaysApply: false`
+- `Commerce-Agent/STYLE_GUIDE.md` — compressed product memory: naming conventions, shipping classes, tax defaults, description format, image standards
+- `Marketing-Agent/STYLE_GUIDE.md` — compressed campaign memory: brand voice, email structure, subject line format, Mailchimp defaults, social media guidelines
+- `Operations-Agent/STYLE_GUIDE.md` — compressed ops memory: scheduling format, Florida sales tax notes, SOP document standard
+- `Commerce-Agent/output/` — ephemeral handoff zone for cross-agent work; gitignored
+- `Marketing-Agent/output/` — ephemeral handoff zone for cross-agent work; gitignored
+- `Operations-Agent/output/` — ephemeral handoff zone for cross-agent work; gitignored
+
+### Changed
+- `orchestrator.mdc` — added `grep`/`rg`-first search instruction to `## Context Efficiency` (avoids loading multiple files when a single terminal search suffices); added new `## Agent Handoff` section defining how the Orchestrator consumes, logs, and deletes files from agent `output/` folders; updated "Director" references to "Vanessa"
+- `manual-maintenance.mdc` — changed `alwaysApply: true` → `false`; rule is now on-demand rather than firing on every message
+- `weekly-backup.mdc` — changed `alwaysApply: true` → `false`; rule is triggered by the Orchestrator's Morning Brief Friday check, not every message
+- `.gitignore` — added per-agent `output/` directories
+
+### Architecture Note
+Phase 7 establishes a **two-tier rule architecture** to solve context bloat:
+- **Tier 1 (always-on):** `orchestrator.mdc` + `checklist-bot.mdc` — tiny, critical, fire on every message
+- **Tier 2 (path-scoped):** Agent specialist rules — fire only when relevant; zero token cost otherwise
+
+Agent-to-agent communication now uses per-agent `output/` folders (replacing the earlier TRANSIT concept). The Orchestrator is responsible for consuming handoff files and cleaning up after each handoff.
+
+---
+
 ## [0.6.0] — 2026-03-23
 
 ### Added

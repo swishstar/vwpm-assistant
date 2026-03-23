@@ -19,6 +19,15 @@ Thumbs.db
 .cursor/cache/
 .cursor/index/
 
+# --- Agent Handoff Zones (ephemeral — not historical records) ---
+# Ignore the contents, but keep README.md so the folder is created on clone
+Commerce-Agent/output/*
+!Commerce-Agent/output/README.md
+Marketing-Agent/output/*
+!Marketing-Agent/output/README.md
+Operations-Agent/output/*
+!Operations-Agent/output/README.md
+
 # --- Temporary Drafts ---
 **/drafts/*.tmp
 **/temp_*
