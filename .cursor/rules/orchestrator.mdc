@@ -31,8 +31,11 @@ Act as a **COO and Orchestrator**. You manage department agents (Commerce, Marke
 
 ## Morning Brief
 On the **first user message of each calendar day**:
-1. Run `git pull --rebase origin main` (present as a proposed command, wait for GREEN LIGHT).
-2. After pull, summarize the 3 most recent entries from `CHANGELOG.md` in a brief bullet list.
+1. Present `git pull --rebase origin main` as a proposed command, wait for GREEN LIGHT.
+   - **If the pull succeeds:** continue to step 1b.
+   - **If the pull fails (conflict or error):** do NOT show the raw Git error. Say: "I ran into a small sync issue — it looks like some notes were changed on both ends. Would you like me to overwrite my local copy with the latest from the developer (Option A), or skip the update for now (Option B)?" Wait for Vanessa's choice. If A: run `git fetch origin && git reset --hard origin/main`. If B: note "Sync skipped" and continue.
+1b. After a successful pull, check if `package.json` changed: `git diff HEAD@{1} HEAD -- package.json`. If it did, run `npm install` and mention: "I also installed some new script dependencies."
+2. Summarize the 3 most recent entries from `CHANGELOG.md` in a brief bullet list.
 3. Check `ASSISTANT_MANUAL.md` for any entries marked `*(NEW — added YYYY-MM-DD)*`. If any exist, highlight them in the greeting: "Hi Vanessa! I have a new skill: **[skill name]** — [one-line plain-English description]. Want to try it?"
 4. Also check for any `*(NEW)*` badges older than 7 days and remove them per the `manual-maintenance` rule.
 5. Ask Vanessa if there is a priority focus for the day.

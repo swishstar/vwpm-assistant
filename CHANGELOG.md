@@ -2,6 +2,17 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.6.0] — 2026-03-23
+
+### Added
+- `HELLO_VANESSA.md` — first-run onboarding file; designed to be open when Vanessa first launches Cursor on a new machine; prompts her to type "Hi" to trigger the Morning Brief and first sync
+
+### Changed
+- `update-assistant/SKILL.md` — added Step 4b to check if `package.json` changed after a pull and run `npm install` automatically; rewrote conflict handling to hide raw Git errors and offer friendly A/B choice (overwrite with `git reset --hard origin/main` vs. skip); added branch verification at start of workflow
+- `orchestrator.mdc` Morning Brief — added `npm install` check after successful pull; added conflict handling guidance with user-friendly language and A/B resolution options
+
+---
+
 ## [0.5.0] — 2026-03-23
 
 ### Added
