@@ -26,7 +26,7 @@ echo ""
 # -----------------------------------------------------------------------------
 # Step 1: Check required tools
 # -----------------------------------------------------------------------------
-echo -e "${BLUE}[1/5] Checking required tools...${NC}"
+echo -e "${BLUE}[1/6] Checking required tools...${NC}"
 
 check_tool() {
   if ! command -v "$1" &>/dev/null; then
@@ -60,12 +60,42 @@ else
   echo -e "${GREEN}  ✓ ffmpeg found: $(command -v ffmpeg)${NC}"
 fi
 
+if ! command -v uv &>/dev/null; then
+  echo -e "${YELLOW}  ⚠ uv not found — needed for the Mailchimp MCP server.${NC}"
+  echo -e "    Install via: ${BOLD}curl -LsSf https://astral.sh/uv/install.sh | sh${NC}"
+  echo -e "    Then restart your terminal and re-run this script."
+  UV_MISSING=true
+else
+  echo -e "${GREEN}  ✓ uv found: $(command -v uv)${NC}"
+  UV_MISSING=false
+fi
+
 echo ""
 
 # -----------------------------------------------------------------------------
-# Step 2: Copy mcp.json.example → .cursor/mcp.json
+# Step 2: Install Python MCP packages (requires uv)
 # -----------------------------------------------------------------------------
-echo -e "${BLUE}[2/5] Setting up MCP configuration...${NC}"
+echo -e "${BLUE}[2/6] Installing Python MCP packages...${NC}"
+
+if [ "$UV_MISSING" = true ]; then
+  echo -e "${YELLOW}  ⚠ Skipping — uv is not installed. Install it (see above) and re-run.${NC}"
+else
+  echo -e "  Installing mcp-mailchimp via uvx (this may take a moment on first run)..."
+  if uvx mcp-mailchimp --help &>/dev/null 2>&1; then
+    echo -e "${GREEN}  ✓ mcp-mailchimp is ready.${NC}"
+  else
+    # uvx caches the package on first use; a non-zero exit from --help is normal
+    uvx --from mcp-mailchimp mcp-mailchimp --help &>/dev/null 2>&1 || true
+    echo -e "${GREEN}  ✓ mcp-mailchimp package cached via uv.${NC}"
+  fi
+fi
+
+echo ""
+
+# -----------------------------------------------------------------------------
+# Step 3: Copy mcp.json.example → .cursor/mcp.json
+# -----------------------------------------------------------------------------
+echo -e "${BLUE}[3/6] Setting up MCP configuration...${NC}"
 
 MCP_EXAMPLE="$SCRIPT_DIR/.cursor/mcp.json.example"
 MCP_TARGET="$SCRIPT_DIR/.cursor/mcp.json"
@@ -87,9 +117,9 @@ fi
 echo ""
 
 # -----------------------------------------------------------------------------
-# Step 3: Copy .env.example → .env
+# Step 4: Copy .env.example → .env
 # -----------------------------------------------------------------------------
-echo -e "${BLUE}[3/5] Setting up environment variables...${NC}"
+echo -e "${BLUE}[4/6] Setting up environment variables...${NC}"
 
 ENV_EXAMPLE="$SCRIPT_DIR/.env.example"
 ENV_TARGET="$SCRIPT_DIR/.env"
@@ -110,9 +140,9 @@ fi
 echo ""
 
 # -----------------------------------------------------------------------------
-# Step 4: Install Node.js dependencies
+# Step 5: Install Node.js dependencies
 # -----------------------------------------------------------------------------
-echo -e "${BLUE}[4/5] Installing Node.js dependencies...${NC}"
+echo -e "${BLUE}[5/6] Installing Node.js dependencies...${NC}"
 
 PACKAGE_JSON="$SCRIPT_DIR/package.json"
 
@@ -140,9 +170,9 @@ echo -e "${GREEN}  ✓ Node.js dependencies installed.${NC}"
 echo ""
 
 # -----------------------------------------------------------------------------
-# Step 5: Verify inbox and training folders exist
+# Step 6: Verify inbox and training folders exist
 # -----------------------------------------------------------------------------
-echo -e "${BLUE}[5/5] Verifying workspace folders...${NC}"
+echo -e "${BLUE}[6/6] Verifying workspace folders...${NC}"
 
 for dir in inbox training; do
   if [ ! -d "$SCRIPT_DIR/$dir" ]; then
