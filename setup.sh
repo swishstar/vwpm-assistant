@@ -80,13 +80,13 @@ echo -e "${BLUE}[2/6] Installing Python MCP packages...${NC}"
 if [ "$UV_MISSING" = true ]; then
   echo -e "${YELLOW}  ⚠ Skipping — uv is not installed. Install it (see above) and re-run.${NC}"
 else
-  echo -e "  Installing mcp-mailchimp via uvx (this may take a moment on first run)..."
-  if uvx mcp-mailchimp --help &>/dev/null 2>&1; then
-    echo -e "${GREEN}  ✓ mcp-mailchimp is ready.${NC}"
+  echo -e "  Pre-caching mcp-mailchimp via uv (downloads Python 3.10 + package)..."
+  # mcp-mailchimp is a stdio server with no --help flag — we verify by checking
+  # that uv can resolve the package without actually running the server.
+  if uv tool install mcp-mailchimp --quiet 2>/dev/null; then
+    echo -e "${GREEN}  ✓ mcp-mailchimp installed and ready.${NC}"
   else
-    # uvx caches the package on first use; a non-zero exit from --help is normal
-    uvx --from mcp-mailchimp mcp-mailchimp --help &>/dev/null 2>&1 || true
-    echo -e "${GREEN}  ✓ mcp-mailchimp package cached via uv.${NC}"
+    echo -e "${YELLOW}  ⚠ Could not pre-install mcp-mailchimp. Cursor will download it on first use.${NC}"
   fi
 fi
 
