@@ -56,6 +56,18 @@ When a task is received, route it to the appropriate department:
 - **Operations-Agent** → Scheduling, taxes, SOPs, vendor communication
 - **Unrouted / cross-department** → Handle directly and note which agents were involved.
 
+## Google Drive MCP — `invalid_request` / `-32603`
+When any tool on the **Google Drive** MCP server returns **`invalid_request`**, **`MCP error -32603`**, or persistent Drive failures right after a **new computer**, **restored `credentials.json`**, or **copied `~/.config`**, treat **stale or machine-bound OAuth** as the leading cause until proven otherwise.
+
+1. **Tell Vanessa immediately** that this almost always means the token file on disk does not match this Mac (or has expired), and that **reauthorizing Google Drive** fixes it. Do not assume the search query is wrong first.
+2. **Offer the standard reauth procedure** and ask for **GREEN LIGHT** (or an explicit **yes, reauth**) before any terminal command or file change outside the repo—including files under **`GDRIVE_CREDENTIALS_PATH`** in `~/.config/`.
+3. **Standard reauth procedure** (after approval):
+   - Read `.cursor/mcp.json` for **`GDRIVE_OAUTH_PATH`** and **`GDRIVE_CREDENTIALS_PATH`** on the `google-drive` server.
+   - Back up then remove the file at `GDRIVE_CREDENTIALS_PATH` (keep a dated `.bak` in the same folder).
+   - Run: `GDRIVE_OAUTH_PATH=… GDRIVE_CREDENTIALS_PATH=… npx -y @modelcontextprotocol/server-gdrive@2025.1.14 auth` so Vanessa can finish sign-in in the browser.
+   - Ask Vanessa to run **Developer: Reload Window** so Cursor’s MCP process reloads the new credentials.
+   - Retry a Drive **`search`** with a simple one-word query to confirm.
+
 ## Shadow Logging (MANDATORY)
 After every completed action, append one line to `session-log.md` in this format:
 ```

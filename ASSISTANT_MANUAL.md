@@ -1,6 +1,6 @@
 # Rosy — Your Business Assistant
 *Skills & Capabilities Reference*
-*Last Updated: 2026-03-23 (v0.5.0)*
+*Last Updated: 2026-03-28 (v0.7.1)*
 
 ---
 
@@ -94,11 +94,20 @@ Once you have reviewed the draft and the checklist, type **GREEN LIGHT** in the 
 
 | Service | Status | Agent |
 |---------|--------|-------|
-| WordPress / WooCommerce | Pending credentials | Commerce-Agent |
-| Mailchimp | Pending credentials | Marketing-Agent |
-| Google Drive | Pending credentials | Operations-Agent |
+| WordPress / WooCommerce | Active (this workspace) | Commerce-Agent |
+| Mailchimp | Active (this workspace) | Marketing-Agent |
+| Google Drive | Active — OAuth on Vanessa’s machine | Operations-Agent |
 | Social Media | Pending setup | Marketing-Agent |
 | Canva | Pending setup | Marketing-Agent |
+
+### Google Drive MCP (Vanessa’s machine)
+
+Rosy can search and read files in your Google Drive through the MCP server defined in `.cursor/mcp.json`. Two files matter:
+
+- **`GDRIVE_OAUTH_PATH`** — Google Cloud **OAuth client** JSON (Desktop app client ID/secret); safe to keep across machines, but treat it as secret.
+- **`GDRIVE_CREDENTIALS_PATH`** — **Refreshed tokens** after you sign in; this file is **tied to the machine** (and can expire). If you copy `mcp.json` or config to a new Mac **without** reauthorizing, Drive tools may fail.
+
+**If Drive returns `invalid_request`, `MCP error -32603`, or stops working after a new computer:** ask Rosy to run the **Drive reauth procedure**. She will back up the old credentials file, run the `auth` command so you can sign in again in the browser, then have you **reload the Cursor window** before retrying. Details are in the Orchestrator rule **Google Drive MCP**.
 
 ### Folder Map
 
@@ -123,11 +132,13 @@ Once you have reviewed the draft and the checklist, type **GREEN LIGHT** in the 
 
 Both can be revoked at any time without touching your main login.
 
+**Google Drive:** The OAuth client JSON and `credentials.json` paths live outside this repo (see `.cursor/mcp.json`). Do not commit live secrets. After moving to a new computer, **reauthorize** so `credentials.json` is valid on that Mac.
+
 ### Rules Active in This Workspace
 
 | Rule | What It Does |
 |------|--------------|
-| `orchestrator.mdc` | Core identity (Rosy), review gates, morning brief, shadow logging |
+| `orchestrator.mdc` | Core identity (Rosy), review gates, morning brief, shadow logging; **Google Drive MCP** — on `invalid_request` / `-32603`, suggest reauth and standard fix after **GREEN LIGHT** |
 | `products.mdc` | WooCommerce-specific behavior — archive-first, inbox drafting |
 | `email.mdc` | Mailchimp-specific behavior — archive-first, inbox drafting |
 | `checklist-bot.mdc` | Intercepts launch/send/publish commands and forces checklist review |

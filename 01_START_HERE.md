@@ -61,10 +61,11 @@ To approve and proceed, type: **GREEN LIGHT**
 
 | Service | Status |
 |---------|--------|
-| WordPress / WooCommerce | Pending — add credentials to `.cursor/mcp.json` |
-| Mailchimp | Pending — add credentials to `.cursor/mcp.json` |
+| WordPress / WooCommerce | Active — configured in `.cursor/mcp.json` |
+| Mailchimp | Active — configured in `.cursor/mcp.json` |
+| Google Drive | Active — OAuth files on this Mac (see `ASSISTANT_MANUAL.md`) |
 
-> **Security reminder:** Use a WordPress **Application Password** (not your main login) and a scoped Mailchimp API key. See `ASSISTANT_MANUAL.md` for setup instructions.
+> **Security reminder:** Use a WordPress **Application Password** (not your main login) and a scoped Mailchimp API key. Never commit `.cursor/mcp.json` if it contains secrets. See `ASSISTANT_MANUAL.md` for setup and **Google Drive troubleshooting** (`invalid_request` / new machine).
 
 ---
 

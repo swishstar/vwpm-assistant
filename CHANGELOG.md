@@ -2,6 +2,17 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.7.1] — 2026-03-28
+
+### Added
+- **Orchestrator — Google Drive MCP:** When Drive tools return `invalid_request` or `MCP error -32603`, Rosy must immediately suggest stale OAuth, offer the standard reauth procedure (backup/remove `GDRIVE_CREDENTIALS_PATH`, `npx … auth`, reload Cursor), and wait for **GREEN LIGHT** before running commands.
+
+### Changed
+- `ASSISTANT_MANUAL.md` — MCP integrations marked active for this workspace; new **Google Drive MCP** subsection (paths, new-machine behavior, pointer to Orchestrator).
+- `01_START_HERE.md` — MCP table updated (WordPress, Mailchimp, Google Drive) and security note about not committing secrets.
+
+---
+
 ## [0.7.0] — 2026-03-23
 
 ### Added
