@@ -57,7 +57,7 @@ This is your cheat sheet. When you are about to do something manually — stop a
 **`ii-talks`**
 **Say:** **`II Talks status`** · **`II Talks create`** · **`II Talks post-show`**
 > I manage the full lifecycle of II Talk events across all venues. Three modes:
-> - **`II Talks status`** — Print the master status table from `II TALKS.md` and flag any events needing attention.
+> - **`II Talks status`** — Print the master status table from `II-TALKS.md` and flag any events needing attention.
 > - **`II Talks create`** — Walk you through setting up a new event: Canva asset reminder, ticket product creation, featured flag, and pre-show email draft.
 > - **`II Talks post-show`** — Run through all post-show steps in order: tag participants, unpublish ticket, remove featured, send coupon email, convert audio, upload to WordPress, and create or update the recording product.
 
@@ -118,7 +118,7 @@ Rosy can search and read files in your Google Drive through the MCP server defin
 | `Marketing-Agent/past-emails/` | Reference library of past campaigns |
 | `checklists/` | Product and email launch checklists |
 | `training/` | Notes awaiting compression into memory |
-| `II TALKS.md` | Living status document for the II Talks event series |
+| `II-TALKS.md` | Living status document for the II Talks event series |
 | `session-log.md` | Every action Rosy has taken — your paper trail |
 | `KNOWLEDGE_BASE.md` | Rosy's compressed memory and preferences |
 | `scripts/` | Automation scripts for advanced tasks (ffmpeg, Puppeteer) |

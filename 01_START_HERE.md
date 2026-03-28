@@ -37,23 +37,23 @@ To approve and proceed, type: **GREEN LIGHT**
 
 | File / Folder | What It Is |
 |---|---|
-| [`session-log.md`](session-log.md) | Every action Rosy has taken — your paper trail |
-| [`II TALKS.md`](II%20TALKS.md) | Living status tracker for the II Talk event series |
-| [`inbox/`](inbox/) | Drafts waiting for your review |
-| [`checklists/product-launch.md`](checklists/product-launch.md) | Pre-launch checklist for new products |
-| [`checklists/email-sequence.md`](checklists/email-sequence.md) | Pre-send checklist for email campaigns |
-| [`KNOWLEDGE_BASE.md`](KNOWLEDGE_BASE.md) | Rosy's memory — compressed styles and preferences |
-| [`CHANGELOG.md`](CHANGELOG.md) | History of all updates to this system |
-| [`ASSISTANT_MANUAL.md`](ASSISTANT_MANUAL.md) | Full capabilities reference |
+| [`session-log.md`](./session-log.md) | Every action Rosy has taken — your paper trail |
+| [`II-TALKS.md`](II-TALKS.md) | Living status tracker for the II Talk event series |
+| [`inbox/`](./inbox/) | Drafts waiting for your review |
+| [`checklists/product-launch.md`](./checklists/product-launch.md) | Pre-launch checklist for new products |
+| [`checklists/email-sequence.md`](./checklists/email-sequence.md) | Pre-send checklist for email campaigns |
+| [`KNOWLEDGE_BASE.md`](./KNOWLEDGE_BASE.md) | Rosy's memory — compressed styles and preferences |
+| [`CHANGELOG.md`](./CHANGELOG.md) | History of all updates to this system |
+| [`ASSISTANT_MANUAL.md`](./ASSISTANT_MANUAL.md) | Full capabilities reference |
 
 ---
 
 ## Drop New Material Here
 
-- **New images, flyers, or copy** → drag into [`inbox/`](inbox/)
-- **New product info** → drop a file in [`inbox/`](inbox/) and tell Rosy: "I dropped a new product in the inbox"
-- **Past products for reference** → save to [`Commerce-Agent/past-products/`](Commerce-Agent/past-products/)
-- **Past email campaigns** → save to [`Marketing-Agent/past-emails/`](Marketing-Agent/past-emails/)
+- **New images, flyers, or copy** → drag into [`inbox/`](./inbox/)
+- **New product info** → drop a file in [`inbox/`](./inbox/) and tell Rosy: "I dropped a new product in the inbox"
+- **Past products for reference** → save to [`Commerce-Agent/past-products/`](./Commerce-Agent/past-products/)
+- **Past email campaigns** → save to [`Marketing-Agent/past-emails/`](./Marketing-Agent/past-emails/)
 
 ---
 

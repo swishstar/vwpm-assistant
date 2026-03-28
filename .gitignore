@@ -7,7 +7,6 @@ credentials.json
 # --- User-Specific Data (Managed by 'Context' branch) ---
 inbox/
 archive/
-checklists/
 training/
 session-log.md
 *.log

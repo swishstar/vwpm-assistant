@@ -26,7 +26,7 @@ If the mode is ambiguous, ask: "Which mode would you like — Status (view the t
 ## MODE: STATUS
 
 ### Step 1 — Read the Document
-Read `II TALKS.md` from the project root.
+Read `II-TALKS.md` from the project root.
 
 ### Step 2 — Print the Master Tables
 Display both master status tables (Pre-Show Steps and Post-Show Steps) from the document.
@@ -150,13 +150,13 @@ VWPM — Vero Beach, FL | [unsubscribe link]
 
 Present the email draft to Vanessa and wait for GREEN LIGHT before creating in Mailchimp.
 
-### Step 7 — Update II TALKS.md
-Open `II TALKS.md` and update the relevant row(s) in the Master Status Table:
+### Step 7 — Update II-TALKS.md
+Open `II-TALKS.md` and update the relevant row(s) in the Master Status Table:
 - **Pre-Show table:** Ticket Product → ✅ · Featured Set → ✅
 - Add or update the Per-Talk History section with the WooCommerce product ID and event date.
 
 Append to `session-log.md`:
-`| YYYY-MM-DD HH:MM | FILE WRITE | II TALKS.md updated — [Talk] at [Venue] ([Date]) ticket created |`
+`| YYYY-MM-DD HH:MM | FILE WRITE | II-TALKS.md updated — [Talk] at [Venue] ([Date]) ticket created |`
 
 ---
 
@@ -269,11 +269,11 @@ Check `Commerce-Agent/past-products/` for an existing recording product for this
 
 Log: `| YYYY-MM-DD HH:MM | MCP CALL | WooCommerce: recording product [created/updated] — [product name] |`
 
-### Step 10 — Update II TALKS.md
-Open `II TALKS.md` and mark all completed post-show steps as ✅ in the relevant row.
+### Step 10 — Update II-TALKS.md
+Open `II-TALKS.md` and mark all completed post-show steps as ✅ in the relevant row.
 Update the Per-Talk History section with any product IDs, email campaign IDs, or notes.
 
-Log: `| YYYY-MM-DD HH:MM | FILE WRITE | II TALKS.md updated — post-show complete for [Talk] at [Venue] ([Date]) |`
+Log: `| YYYY-MM-DD HH:MM | FILE WRITE | II-TALKS.md updated — post-show complete for [Talk] at [Venue] ([Date]) |`
 
 ---
 
