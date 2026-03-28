@@ -1,0 +1,10 @@
+{
+  "name": "business-assistant-scripts",
+  "version": "1.0.0",
+  "description": "Puppeteer automation scripts for Rosy",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests configured yet\""
+  },
+  "dependencies": {}
+}
