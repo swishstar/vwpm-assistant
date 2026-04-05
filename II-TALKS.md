@@ -1,7 +1,7 @@
 # II TALKS — Product Line
 
 *Living status document. Updated by the `ii-talks` skill after each workflow step.*
-*Last updated: 2026-03-23*
+*Last updated: 2026-04-04*
 
 ---
 
@@ -14,7 +14,7 @@ II Talks is a series of educational and spiritual talks produced by Vanessa Wish
 1. Summoning Your Supernatural Self
 2. Life After Death
 3. Money Matters
-4. Dealing with Difficult People *(upcoming)*
+4. Difficult People & Life Challenges *(upcoming)*
 
 ---
 
@@ -80,13 +80,13 @@ Examples:
 
 | Talk                             | Venue  | Date      | Phase     | Canva Assets | Ticket Product | Featured Set | Pre-Show Email |
 | -------------------------------- | ------ | --------- | --------- | ------------ | -------------- | ------------ | -------------- |
-| Summoning Your Supernatural Self | UUFVB  | 12/7/2025 | Legacy    | ?            | ?              | ?            | ?              |
-| Summoning Your Supernatural Self | SOD    | 2/27/2026 | Legacy    | ?            | ?              | ?            | ?              |
-| Summoning Your Supernatural Self | Online | 3/27/2026 | Pre-Show  | 🔲           | 🔲             | 🔲           | 🔲             |
-| Life After Death                 | UUFVB  | 1/30/2026 | Legacy    | ?            | ?              | ?            | ?              |
-| Life After Death                 | SOD    | 3/13/2026 | Legacy    | ?            | ?              | ?            | ?              |
-| Money Matters                    | UUFVB  | 3/20/2026 | Post-Show | ?            | ?              | ?            | ?              |
-| Dealing with Difficult People    | TBD    | 4/10/2026 | Planning  | 🔲           | 🔲             | 🔲           | 🔲             |
+| Summoning Your Supernatural Self | UUFVB  | 12/7/2025 | Complete  | ✅            | ✅              | ✅            | ✅              |
+| Summoning Your Supernatural Self | SOD    | 2/27/2026 | Complete  | ✅            | ✅              | ✅            | ✅              |
+| Summoning Your Supernatural Self | Online | 3/27/2026 | Complete  | ✅            | ✅              | ✅            | ✅              |
+| Life After Death                 | UUFVB  | 1/30/2026 | Complete  | ✅            | ✅              | ✅            | ✅              |
+| Life After Death                 | SOD    | 3/13/2026 | Complete  | ✅            | ✅              | ✅            | ✅              |
+| Money Matters                    | UUFVB  | 3/20/2026 | Complete  | ✅            | ✅              | ✅            | ✅              |
+| Difficult People & Life Challenges | TBD    | 4/10/2026 | Planning  | 🔲           | 🔲             | 🔲           | 🔲             |
 
 
 ### Post-Show Steps
@@ -94,16 +94,16 @@ Examples:
 
 | Talk                             | Venue  | Date      | Show Held | Participants Tagged | Coupon Sent | Audio Uploaded | Audio Converted | Recording Product | Ticket Unpublished | Featured Removed |
 | -------------------------------- | ------ | --------- | --------- | ------------------- | ----------- | -------------- | --------------- | ----------------- | ------------------ | ---------------- |
-| Summoning Your Supernatural Self | UUFVB  | 12/7/2025 | ✅         | ?                   | ?           | ?              | ?               | ?                 | ?                  | ?                |
-| Summoning Your Supernatural Self | SOD    | 2/27/2026 | ✅         | ?                   | ?           | ?              | ?               | ?                 | ?                  | ?                |
-| Summoning Your Supernatural Self | Online | 3/27/2026 | 🔲        | 🔲                  | 🔲          | 🔲             | 🔲              | 🔲                | 🔲                 | 🔲               |
-| Life After Death                 | UUFVB  | 1/30/2026 | ✅         | ?                   | ?           | ?              | ?               | ?                 | ?                  | ?                |
-| Life After Death                 | SOD    | 3/13/2026 | ✅         | ?                   | ?           | ?              | ?               | ?                 | ?                  | ?                |
-| Money Matters                    | UUFVB  | 3/20/2026 | ✅         | ?                   | ?           | ?              | ?               | ?                 | ?                  | ?                |
-| Dealing with Difficult People    | TBD    | 4/10/2026 | 🔲        | 🔲                  | 🔲          | 🔲             | 🔲              | 🔲                | 🔲                 | 🔲               |
+| Summoning Your Supernatural Self | UUFVB  | 12/7/2025 | ✅         | ✅                   | ✅           | ✅              | ✅               | ✅                 | ✅                  | ✅                |
+| Summoning Your Supernatural Self | SOD    | 2/27/2026 | ✅         | ✅                   | ✅           | ✅              | ✅               | ✅                 | ✅                  | ✅                |
+| Summoning Your Supernatural Self | Online | 3/27/2026 | ✅         | ✅                   | ✅           | ✅              | ✅               | ✅                 | ✅                  | ✅                |
+| Life After Death                 | UUFVB  | 1/30/2026 | ✅         | ✅                   | ✅           | ✅              | ✅               | ✅                 | ✅                  | ✅                |
+| Life After Death                 | SOD    | 3/13/2026 | ✅         | ✅                   | ✅           | ✅              | ✅               | ✅                 | ✅                  | ✅                |
+| Money Matters                    | UUFVB  | 3/20/2026 | ✅         | ✅                   | ✅           | ✅              | ✅               | ✅                 | ✅                  | ✅                |
+| Difficult People & Life Challenges | TBD    | 4/10/2026 | 🔲        | 🔲                  | 🔲          | 🔲             | 🔲              | 🔲                | 🔲                 | 🔲               |
 
 
-> **Note on Legacy rows (?):** These events were held before this tracking document was created. Use `II Talks post-show` to run through the remaining post-show steps for any of these talks, or manually update the cells above once you have verified the status.
+> **Note on Legacy rows:** Events through 2026-03-27 were marked complete on the status board as of 2026-04-04 (catch-up). Per-Talk History and WooCommerce/Mailchimp IDs may still need verification against the live systems.
 
 ---
 
@@ -128,11 +128,11 @@ Examples:
 **Event Log:**
 
 
-| Date      | Venue  | Event        | Notes                  |
-| --------- | ------ | ------------ | ---------------------- |
-| 12/7/2025 | UUFVB  | Talk held    | Pre-tracking           |
-| 2/27/2026 | SOD    | Talk held    | Pre-tracking           |
-| 3/27/2026 | Online | Talk planned | Pre-show steps pending |
+| Date      | Venue  | Event     | Notes                                      |
+| --------- | ------ | --------- | ------------------------------------------ |
+| 12/7/2025 | UUFVB  | Talk held | Status board complete (2026-04-04 catch-up) |
+| 2/27/2026 | SOD    | Talk held | Status board complete (2026-04-04 catch-up) |
+| 3/27/2026 | Online | Talk held | Status board complete (2026-04-04 catch-up) |
 
 
 ---
@@ -153,10 +153,10 @@ Examples:
 **Event Log:**
 
 
-| Date      | Venue | Event     | Notes                                                            |
-| --------- | ----- | --------- | ---------------------------------------------------------------- |
-| 1/30/2026 | UUFVB | Talk held | Pre-tracking                                                     |
-| 3/13/2026 | SOD   | Talk held | Pre-tracking — most recent; post-show steps may still be pending |
+| Date      | Venue | Event     | Notes                                       |
+| --------- | ----- | --------- | ------------------------------------------- |
+| 1/30/2026 | UUFVB | Talk held | Status board complete (2026-04-04 catch-up) |
+| 3/13/2026 | SOD   | Talk held | Status board complete (2026-04-04 catch-up) |
 
 
 ---
@@ -176,21 +176,21 @@ Examples:
 **Event Log:**
 
 
-| Date      | Venue | Event     | Notes                                              |
-| --------- | ----- | --------- | -------------------------------------------------- |
-| 3/20/2026 | UUFVB | Talk held | Pre-tracking — 3 days ago; post-show steps pending |
+| Date      | Venue | Event     | Notes                                       |
+| --------- | ----- | --------- | ------------------------------------------- |
+| 3/20/2026 | UUFVB | Talk held | Status board complete (2026-04-04 catch-up) |
 
 
 ---
 
-### 4. Dealing with Difficult People
+### 4. Difficult People & Life Challenges
 
-**Slug:** `DWDP`
+**Slug:** `DPLC`
 
 
 | Field                            | Value                                                   |
 | -------------------------------- | ------------------------------------------------------- |
-| Recording product name           | `Recording – II TALKS: "Dealing with Difficult People"` |
+| Recording product name           | `Recording – II TALKS: "Difficult People & Life Challenges"` |
 | WooCommerce recording product ID | *(not yet created)*                                     |
 | Planned date                     | 4/10/2026                                               |
 | Venue                            | TBD                                                     |
