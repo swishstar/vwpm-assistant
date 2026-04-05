@@ -3,6 +3,8 @@
 .env
 auth.json
 credentials.json
+gcp-oauth.keys.json
+mcp.json.steve
 
 # --- User-Specific Data (Managed by 'Context' branch) ---
 inbox/

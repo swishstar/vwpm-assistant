@@ -15,6 +15,7 @@ Type any of these in the chat to get started:
 | **`Draft campaign`** | Rosy drafts a new Mailchimp campaign for your review *(Mailchimp only — not Gmail)* |
 | **`Remember: [lesson]`** | Rosy saves a note to `training/` for future learning |
 | **`Run maintenance`** | Rosy compresses all training notes into the Knowledge Base |
+| **`Push my updates`** · **`Sync shared docs`** | Rosy commits and pushes shared files (Knowledge Base, II Talks, checklists, and other non-private docs) to GitHub so Steve can pull the latest |
 | **`II Talks status`** | Rosy prints the master status table for all II Talk events |
 | **`II Talks create`** | Rosy walks through setting up a new talk event — ticket product, featured flag, pre-show email |
 | **`II Talks post-show`** | Rosy runs all post-show steps — tag participants, coupon email, audio conversion, recording product |

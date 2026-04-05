@@ -2,6 +2,20 @@
 
 All notable changes to the Business OS are documented here.
 
+## [0.7.2] — 2026-04-04
+
+### Added
+- **`sync-shared-docs`** skill ([`.cursor/skills/sync-shared-docs/SKILL.md`](.cursor/skills/sync-shared-docs/SKILL.md)) — Vanessa can **push my updates** / **sync shared docs** to commit all non-gitignored changes and `git push origin main` after GREEN LIGHT (pull/rebase first; same friendly conflict handling as Update assistant).
+
+### Changed
+- `orchestrator.mdc` — Agent routing for `sync-shared-docs`; shadow logging action type **`GIT SYNC`** for Update assistant and sync-shared-docs git operations.
+- `ASSISTANT_MANUAL.md` — Daily Operations entry for `sync-shared-docs` (v0.7.2).
+- `01_START_HERE.md` — Quick-Start table row for **Push my updates** / **Sync shared docs**.
+- `weekly-backup.mdc` — Note that shared pushes to `main` use `sync-shared-docs`; weekly backup remains gitignored paths on `context-backup`.
+- `SETUP_GUIDE.md` — Two-machine diagram and sections 3–4 updated: Vanessa pushes shared docs; developer pulls `main`; `main` vs `context-backup` roles clarified.
+
+---
+
 ## [0.7.1] — 2026-03-28
 
 ### Added

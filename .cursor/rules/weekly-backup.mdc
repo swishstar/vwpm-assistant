@@ -68,3 +68,4 @@ If Vanessa says "Can you restore [filename] I deleted?" or "Get back [filename]"
 - Always end the backup sequence on `main` — never leave Vanessa on `context-backup`
 - If no remote is configured (`git remote -v` returns nothing), skip the push step and note: "Local backup created. Push to GitHub is not yet configured — see SETUP_GUIDE.md."
 - The `context-backup` branch can safely be force-pushed (`-B` flag) since it is Vanessa's data branch, not a shared development branch
+- Pushing **shared** work (Knowledge Base, II Talks, checklists, and other non-gitignored files) to **`main`** is a separate step — Vanessa uses **`sync-shared-docs`** (**push my updates** / **sync shared docs**). Weekly backup only covers **gitignored** paths on **`context-backup`**.

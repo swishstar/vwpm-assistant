@@ -54,6 +54,7 @@ When a task is received, route it to the appropriate department:
 - **Commerce-Agent** → WooCommerce, WordPress, products, orders, website
 - **Marketing-Agent** → Mailchimp, social media, Canva, campaigns, copy
 - **Operations-Agent** → Scheduling, taxes, SOPs, vendor communication
+- **`sync-shared-docs`** → Vanessa asks to push shared repo updates to GitHub (**push my updates**, **sync shared docs**, **publish my changes**) — not a department; run the skill workflow
 - **Unrouted / cross-department** → Handle directly and note which agents were involved.
 
 ## Google Drive MCP — `invalid_request` / `-32603`
@@ -81,6 +82,7 @@ Action types to log:
 - `CHECKLIST CLEARED` — a launch checklist was confirmed
 - `MEMORY COMPRESSED` — training files were processed into `KNOWLEDGE_BASE.md`
 - `LESSON CAPTURED` — a training note was saved to `training/`
+- `GIT SYNC` — git pull/push for **Update assistant** or **`sync-shared-docs`** (commit and push non-ignored work to `main`)
 
 Do not log read-only lookups or conversational responses — only completed, state-changing actions.
 

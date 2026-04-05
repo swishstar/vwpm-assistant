@@ -1,6 +1,6 @@
 # Rosy — Your Business Assistant
 *Skills & Capabilities Reference*
-*Last Updated: 2026-03-28 (v0.7.1)*
+*Last Updated: 2026-04-04 (v0.7.2)*
 
 ---
 
@@ -49,6 +49,10 @@ This is your cheat sheet. When you are about to do something manually — stop a
 **`compress-memory`**
 **Say:** **`Run maintenance`**
 > I read all the notes in the training folder, extract the lessons, and add them to my permanent Knowledge Base. Then I clean up the raw notes and archive them to keep things tidy.
+
+**`sync-shared-docs`** *(NEW — added 2026-04-04)*
+**Say:** **`Push my updates`** · **`Sync shared docs`** · **`Publish my changes`**
+> I commit and push your shared work to GitHub on the main branch — Knowledge Base, II Talks, checklists, and any other files that are not in your private ignored folders — so Steve can pull the latest without using your computer. Your inbox, session log, training notes, and archive stay local until you run a separate backup.
 
 ---
 

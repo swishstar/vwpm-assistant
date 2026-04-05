@@ -8,13 +8,14 @@
 ```
 Your Machine (Dev)           GitHub (Private Repo)       Vanessa's Machine (Prod)
 ─────────────────────        ─────────────────────       ─────────────────────────
-Write rules / skills   →→→   main branch (logic)   →→→  git pull (Update Assistant)
+Write rules / skills   →→→   main branch (shared)   ←→  git pull (Update Assistant)
 Test MCP connections         context-backup branch  ←←←  git push (Weekly Backup)
-Push new features      →→→   (Vanessa's data)
+Push new features      →→→   git push (sync-shared-docs) — non-gitignored docs
 ```
 
-- **You** manage Rosy's brain (rules, skills, scripts) on `main`
-- **Rosy** manages Vanessa's data (logs, checklists, notes) on `context-backup`
+- **You** manage Rosy's brain (rules, skills, scripts) on `main`, and **pull `main`** to get Vanessa's pushes (Knowledge Base, II Talks, checklists, and other shared files).
+- **Vanessa** uses **sync-shared-docs** in Rosy to **push** those shared files to `main` after meaningful edits; she uses **Update assistant** to pull your work.
+- **Rosy** uses **weekly backup** for **gitignored** data only (`session-log.md`, `training/`, `archive/`, etc.) on `context-backup` — restore/snapshot lane, not a substitute for `main`.
 - **Credentials** never leave either machine
 
 ---
@@ -128,6 +129,12 @@ Vanessa types: **"Update assistant"** or **"Pull updates"**
 
 Rosy presents the `git pull --rebase origin main` command, waits for GREEN LIGHT, runs it, and summarizes what changed.
 
+### Vanessa pushes shared docs (so you can pull them)
+
+When Vanessa (or someone helping on her machine) changes files that **are not gitignored** — for example `KNOWLEDGE_BASE.md`, `II-TALKS.md`, `checklists/`, or new documentation — she types **"Push my updates"**, **"Sync shared docs"**, or **"Publish my changes"**.
+
+Rosy runs the **`sync-shared-docs`** skill: pull/rebase on `main`, show what will be committed, wait for GREEN LIGHT, then `git add -A`, commit, and `git push origin main`. **You** then `git pull` on your machine to get those changes.
+
 ### Fixing a bug in a script
 
 Same as above — edit, commit, push. Vanessa updates on demand or during the next Friday morning brief (when Rosy's Morning Brief suggests running updates).
@@ -135,6 +142,8 @@ Same as above — edit, commit, push. Vanessa updates on demand or during the ne
 ---
 
 ## Section 4: Context Backup (Vanessa's Data)
+
+**`main`** is the source of truth for **shared, non-gitignored** repo content (logic, docs, Knowledge Base, II Talks, checklists when committed). **`context-backup`** is only for **gitignored** operational files so they can be restored or snapshot without mixing them into normal `main` history.
 
 ### How it works
 
